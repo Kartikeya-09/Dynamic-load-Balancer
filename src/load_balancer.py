@@ -1,24 +1,40 @@
 import psutil
 import time
+import logging
 
-def get_cpu_load(interval=1):
-    """Returns the CPU usage percentage."""
-    return psutil.cpu_percent(interval=interval)
+logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(message)s")
 
 class LoadBalancer:
-    """Simple round-robin load balancer."""
     def __init__(self, servers):
+        """Initialize with a list of servers."""
         self.servers = servers
-        self.index = 0
+        self.server_load = {server: 0 for server in servers}  # Track load per server
+
+    def add_task(self, task_id, task_load):
+        """Assign task to the least loaded server."""
+        least_loaded_server = min(self.server_load, key=self.server_load.get)
+        self.server_load[least_loaded_server] += task_load
+        logging.info(f"Task {task_id} assigned to {least_loaded_server} (Load: {task_load}%)")
 
     def get_next_server(self):
-        """Returns the next server in the round-robin sequence."""
-        server = self.servers[self.index]
-        self.index = (self.index + 1) % len(self.servers)
+        """Implements round-robin server selection."""
+        server = self.servers.pop(0)
+        self.servers.append(server)
         return server
 
+    def monitor_load(self):
+        """Simulate server load balancing over time."""
+        for _ in range(10):  # Simulating multiple cycles
+            logging.info(f"Current Server Loads: {self.server_load}")
+            time.sleep(2)
+
+# Example usage
 if __name__ == "__main__":
-    while True:
-        cpu_usage = get_cpu_load()
-        print(f"CPU Load: {cpu_usage}%")
-        time.sleep(1)
+    servers = ["Server-1", "Server-2", "Server-3"]
+    balancer = LoadBalancer(servers)
+    tasks = [(1, 20), (2, 35), (3, 10), (4, 50)]  # (Task ID, Load %)
+
+    for task_id, load in tasks:
+        balancer.add_task(task_id, load)
+
+    balancer.monitor_load()

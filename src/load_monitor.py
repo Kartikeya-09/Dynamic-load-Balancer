@@ -5,6 +5,10 @@ import logging
 # Configure logging for debugging
 logging.basicConfig(filename="cpu_monitor.log", level=logging.INFO, format="%(asctime)s - CPU Load: %(message)s%%")
 
+def get_cpu_load(interval=1):
+    """Returns the CPU usage percentage."""
+    return psutil.cpu_percent(interval=interval)
+
 def monitor_cpu(interval=2, duration=30):
     """
     Monitors CPU utilization at regular intervals and logs the data.
