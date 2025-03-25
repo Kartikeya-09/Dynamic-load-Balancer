@@ -3,6 +3,7 @@ import load_monitor
 import load_balancer
 import visualization
 import logging
+import time
 
 # Configure logging with timestamps
 logging.basicConfig(filename="main.log", level=logging.INFO, format="%(asctime)s - %(message)s", datefmt="%Y-%m-%d %H:%M:%S")
@@ -11,9 +12,11 @@ def monitor():
     """Monitors CPU load in a separate thread."""
     while True:
         cpu_load = load_monitor.get_cpu_load()
-        logging.info(f"CPU Load: {cpu_load}%")
+        if cpu_load > 0:  # Log only when CPU load is non-zero
+            logging.info(f"CPU Load: {cpu_load}%")
         print(f"CPU Load: {cpu_load}%")
-        
+        time.sleep(1)  # Reduce CPU usage by adding a delay
+
 def visualize():
     """Visualizes CPU usage graph."""
     logging.info("Starting visualization.")

@@ -423,3 +423,70 @@
 2025-03-25 19:33:28 - CPU Load: CPU Load: 4.5%%
 2025-03-25 19:33:29 - CPU Load: CPU Load: 2.1%%
 2025-03-25 19:33:29 - CPU Load: CPU Load: 2.1%%
+2025-03-25 19:39:42 - CPU Load: Program started.%
+2025-03-25 19:39:42 - CPU Load: Started CPU monitoring thread.%
+2025-03-25 19:39:42 - CPU Load: LoadBalancer initialized with servers: ['Server-1', 'Server-2', 'Server-3']%
+2025-03-25 19:39:42 - CPU Load: Initialized LoadBalancer.%
+2025-03-25 19:39:42 - CPU Load: Next server selected: Server-1%
+2025-03-25 19:39:42 - CPU Load: Task 1 assigned to Server-1.%
+2025-03-25 19:39:42 - CPU Load: Next server selected: Server-2%
+2025-03-25 19:39:42 - CPU Load: Task 2 assigned to Server-2.%
+2025-03-25 19:39:42 - CPU Load: Next server selected: Server-3%
+2025-03-25 19:39:42 - CPU Load: Task 3 assigned to Server-3.%
+2025-03-25 19:39:42 - CPU Load: Next server selected: Server-1%
+2025-03-25 19:39:42 - CPU Load: Task 4 assigned to Server-1.%
+2025-03-25 19:39:42 - CPU Load: Next server selected: Server-2%
+2025-03-25 19:39:42 - CPU Load: Task 5 assigned to Server-2.%
+2025-03-25 19:39:42 - CPU Load: Starting visualization.%
+2025-03-25 19:39:42 - CPU Load: Starting CPU load plotting.%
+2025-03-25 19:39:43 - CPU Load: CPU Load: 2.8%%
+2025-03-25 19:39:43 - CPU Load: CPU Load: 2.8%%
+2025-03-25 19:39:43 - CPU Load: Time: 1s | CPU: 2.7%%
+2025-03-25 19:39:44 - CPU Load: Time: 2s | CPU: 1.9%%
+2025-03-25 19:39:45 - CPU Load: CPU Load: 2.5%%
+2025-03-25 19:39:45 - CPU Load: CPU Load: 2.5%%
+2025-03-25 19:39:45 - CPU Load: Time: 3s | CPU: 2.5%%
+2025-03-25 19:39:46 - CPU Load: Time: 4s | CPU: 0.8%%
+2025-03-25 19:39:47 - CPU Load: CPU Load: 1.6%%
+2025-03-25 19:39:47 - CPU Load: CPU Load: 1.6%%
+2025-03-25 19:39:47 - CPU Load: Time: 5s | CPU: 1.6%%
+2025-03-25 19:39:48 - CPU Load: Time: 6s | CPU: 3.2%%
+2025-03-25 19:39:49 - CPU Load: CPU Load: 0.8%%
+2025-03-25 19:39:49 - CPU Load: CPU Load: 0.8%%
+2025-03-25 19:39:49 - CPU Load: Time: 7s | CPU: 0.6%%
+2025-03-25 19:39:50 - CPU Load: Time: 8s | CPU: 0.2%%
+2025-03-25 19:39:51 - CPU Load: CPU Load: 0.4%%
+2025-03-25 19:39:51 - CPU Load: CPU Load: 0.4%%
+2025-03-25 19:39:51 - CPU Load: Time: 9s | CPU: 0.4%%
+2025-03-25 19:39:52 - CPU Load: Time: 10s | CPU: 1.6%%
+2025-03-25 19:39:53 - CPU Load: CPU Load: 16.3%%
+2025-03-25 19:39:53 - CPU Load: CPU Load: 16.3%%
+2025-03-25 19:39:55 - CPU Load: CPU Load: 1.0%%
+2025-03-25 19:39:55 - CPU Load: CPU Load: 1.0%%
+2025-03-25 19:39:57 - CPU Load: CPU Load: 1.0%%
+2025-03-25 19:39:57 - CPU Load: CPU Load: 1.0%%
+2025-03-25 19:39:59 - CPU Load: CPU Load: 0.6%%
+2025-03-25 19:39:59 - CPU Load: CPU Load: 0.6%%
+2025-03-25 19:40:01 - CPU Load: CPU Load: 0.4%%
+2025-03-25 19:40:01 - CPU Load: CPU Load: 0.4%%
+2025-03-25 19:40:03 - CPU Load: CPU Load: 0.8%%
+2025-03-25 19:40:03 - CPU Load: CPU Load: 0.8%%
+2025-03-25 19:40:05 - CPU Load: CPU Load: 1.4%%
+2025-03-25 19:40:05 - CPU Load: CPU Load: 1.4%%
+2025-03-25 19:40:07 - CPU Load: CPU Load: 1.2%%
+2025-03-25 19:40:07 - CPU Load: CPU Load: 1.2%%
+2025-03-25 19:40:09 - CPU Load: CPU Load: 0.8%%
+2025-03-25 19:40:09 - CPU Load: CPU Load: 0.8%%
+2025-03-25 19:40:11 - CPU Load: CPU Load: 0.8%%
+2025-03-25 19:40:11 - CPU Load: CPU Load: 0.8%%
+2025-03-25 19:40:13 - CPU Load: CPU Load: 1.8%%
+2025-03-25 19:40:13 - CPU Load: CPU Load: 1.8%%
+2025-03-25 19:40:15 - CPU Load: CPU Load: 1.4%%
+2025-03-25 19:40:15 - CPU Load: CPU Load: 1.4%%
+2025-03-25 19:40:17 - CPU Load: CPU Load: 1.8%%
+2025-03-25 19:40:17 - CPU Load: CPU Load: 1.8%%
+2025-03-25 19:40:19 - CPU Load: CPU Load: 3.3%%
+2025-03-25 19:40:19 - CPU Load: CPU Load: 3.3%%
+2025-03-25 19:40:20 - CPU Load: Finished CPU load plotting.%
+2025-03-25 19:40:20 - CPU Load: Visualization completed.%
+2025-03-25 19:40:20 - CPU Load: Program completed.%

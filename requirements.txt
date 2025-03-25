@@ -1,5 +1,3 @@
-flask
-requests
-numpy==1.24.0  # Specific version
 psutil
 matplotlib
+numpy==1.24.0  # Specific version

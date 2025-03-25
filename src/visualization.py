@@ -15,7 +15,8 @@ def monitor_cpu(duration=10, interval=1):
         usage = psutil.cpu_percent(interval=interval)
         cpu_usage.append(usage)
         timestamps.append(time.time())
-        logging.info(f"Time: {i+1}s | CPU: {usage}%")
+        if usage > 0:  # Log only when usage is non-zero
+            logging.info(f"Time: {i+1}s | CPU: {usage}%")
         print(f"Time: {i+1}s | CPU: {usage}%")
 
     return timestamps, cpu_usage

@@ -1,6 +1,7 @@
 import psutil
 import time
 import logging
+from itertools import cycle
 
 # Configure logging with timestamps
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(message)s", datefmt="%Y-%m-%d %H:%M:%S")
@@ -9,6 +10,7 @@ class LoadBalancer:
     def __init__(self, servers):
         """Initialize with a list of servers."""
         self.servers = servers
+        self.server_cycle = cycle(servers)  # Use cycle for round-robin
         self.server_load = {server: 0 for server in servers}
         logging.info(f"LoadBalancer initialized with servers: {servers}")
 
@@ -20,8 +22,7 @@ class LoadBalancer:
 
     def get_next_server(self):
         """Implements round-robin server selection."""
-        server = self.servers.pop(0)
-        self.servers.append(server)
+        server = next(self.server_cycle)
         logging.info(f"Next server selected: {server}")
         return server
 
@@ -32,7 +33,7 @@ class LoadBalancer:
             time.sleep(2)
 
 # Example usage
-if __name__ == "__main__":
+if __name__ == "__main__": 
     servers = ["Server-1", "Server-2", "Server-3"]
     balancer = LoadBalancer(servers)
     tasks = [(1, 20), (2, 35), (3, 10), (4, 50)]  # (Task ID, Load %)
