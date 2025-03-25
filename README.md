@@ -19,7 +19,8 @@ It includes modules for:
 
 ### 1️⃣ Clone the Repository
 
-git clone <repository-url>
+git clone <https://github.com/Kartikeya-09/Dynamic-load-Balancer)>
+
 cd OS-Project
 --
 
