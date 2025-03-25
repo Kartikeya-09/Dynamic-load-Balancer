@@ -1,38 +1,84 @@
-OS-Project
-Overview
-This project monitors CPU usage, balances server loads, and visualizes CPU performance over time. It includes modules for load monitoring, load balancing, and data visualization.
+# OS-Project
 
-Prerequisites
-Python 3.8 or higher
-Required Python packages (see requirements.txt)
-Setup Instructions
-Clone the Repository
+## 🖥️ Overview
+This project monitors **CPU usage**, balances **server loads**, and visualizes **CPU performance over time**.  
+It includes modules for:
+- **Load Monitoring** (Tracks CPU utilization)
+- **Load Balancing** (Efficiently distributes tasks)
+- **Data Visualization** (Graphs CPU usage trends)
+
+---
+
+## 📌 Prerequisites
+- **Python 3.8 or higher**  
+- Install required Python packages (see `requirements.txt`)
+
+---
+
+## ⚙️ Setup Instructions
+
+### 1️⃣ Clone the Repository
 
 git clone <repository-url>
 cd OS-Project
-Install Dependencies Use pip to install the required Python packages:
+--
+
+2️⃣ Install Dependencies
+Use pip to install the required packages:
 
 pip install -r requirements.txt
-Run the Application Execute the main script:
+---
+
+3️⃣ Run the Application
+Execute the main script:
 
 python src/main.py
-Log Files
+---
+4️⃣ Logging for Debugging ✅ (Updated)
+The program logs key events for monitoring:
 
-main.log: Logs the main program's execution flow.
-cpu_monitor.log: Logs CPU load monitoring data.
-visualization.log: Logs the visualization process.
-Project Structure
-OS-Project/
-├── requirements.txt       # List of dependencies
-├── README.md              # Project documentation
-├── src/
-│   ├── main.py            # Main entry point
-│   ├── load_monitor.py    # CPU load monitoring module
-│   ├── load_balancer.py   # Server load balancing module
-│   ├── visualization.py   # CPU usage visualization module
-Features
-CPU Monitoring: Logs CPU usage at regular intervals.
-Load Balancing: Distributes tasks across servers using round-robin and least-loaded strategies.
-Visualization: Plots CPU usage over time using Matplotlib.
-License
-This project is licensed under the MIT License.
+main.log → Tracks program execution flow
+
+cpu_monitor.log → Logs CPU load monitoring data
+
+visualization.log → Records visualization process
+
+---
+🚀 Features
+✔ Implemented CPU Monitoring ✅ (Updated in commit #2)
+✔ Improved Task Scheduling in Load Balancer ✅ (Updated in commit #3)
+✔ Added Logging for Better Debugging ✅ (Updated in commit #4)
+✔ Updated README with Setup Instructions ✅ (Updated in commit #5)
+✔ Visualization of CPU Load Using Matplotlib
+
+---
+🛠️ Contributing
+Fork the repository
+
+Create a feature branch (git checkout -b feature-name)
+
+Commit changes (git commit -m "Added feature XYZ")
+
+Push to GitHub (git push origin feature-name)
+
+Open a Pull Request
+
+---
+
+
+---
+
+### ✅ **What’s Updated?**
+1️⃣ **Added logging information** in the setup instructions 📄  
+2️⃣ **Mentioned where updates were made** (CPU monitoring, task scheduling, logging, README updates)  
+3️⃣ **Included a structured project workflow**  
+
+---
+
+### **Next Steps**
+1. Save this as **`README.md`**  
+2. Run the following commands to commit and push the changes:
+   ```bash
+   git add README.md
+   git commit -m "Updated README with setup instructions and logging details"
+   git push origin main
