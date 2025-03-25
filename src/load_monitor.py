@@ -1,17 +1,27 @@
-import itertools
+import psutil
+import time
+import logging
 
-class LoadBalancer:
-    def __init__(self, servers):
-        self.servers = servers
-        self.server_cycle = itertools.cycle(self.servers)
+# Configure logging for debugging
+logging.basicConfig(filename="cpu_monitor.log", level=logging.INFO, format="%(asctime)s - CPU Load: %(message)s%%")
 
-    def get_next_server(self):
-        """Returns the next server to handle the request."""
-        return next(self.server_cycle)
+def monitor_cpu(interval=2, duration=30):
+    """
+    Monitors CPU utilization at regular intervals and logs the data.
+    
+    :param interval: Time in seconds between checks.
+    :param duration: Total duration to monitor (seconds).
+    """
+    print("Starting CPU Load Monitoring... Press Ctrl+C to stop.")
+    
+    start_time = time.time()
+    while time.time() - start_time < duration:
+        cpu_usage = psutil.cpu_percent(interval=1)
+        print(f"CPU Load: {cpu_usage}%")
+        logging.info(cpu_usage)
+        time.sleep(interval - 1)  # Adjust for the time taken to get CPU usage
+
+    print("CPU Monitoring Completed.")
 
 if __name__ == "__main__":
-    servers = ["Server-1", "Server-2", "Server-3"]
-    lb = LoadBalancer(servers)
-
-    for i in range(6):
-        print(f"Task {i+1} assigned to {lb.get_next_server()}")
+    monitor_cpu(interval=2, duration=30)  # Monitor for 30 seconds at 2-sec intervals

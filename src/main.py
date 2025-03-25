@@ -1,6 +1,5 @@
 import threading
-import load_monitor
-import load_balancer
+import load_balancer  # Corrected import
 import visualization
 
 def monitor():
@@ -19,7 +18,7 @@ if __name__ == "__main__":
 
     # Simulate Load Balancer
     servers = ["Server-1", "Server-2", "Server-3"]
-    lb = load_monitor.LoadBalancer(servers)
+    lb = load_balancer.LoadBalancer(servers)  # Corrected reference
 
     for i in range(5):
         print(f"Task {i+1} assigned to {lb.get_next_server()}")
