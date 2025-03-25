@@ -2,12 +2,14 @@ import psutil
 import time
 import logging
 
-# Configure logging for debugging
-logging.basicConfig(filename="cpu_monitor.log", level=logging.INFO, format="%(asctime)s - CPU Load: %(message)s%%")
+# Configure logging with timestamps
+logging.basicConfig(filename="cpu_monitor.log", level=logging.INFO, format="%(asctime)s - CPU Load: %(message)s%%", datefmt="%Y-%m-%d %H:%M:%S")
 
 def get_cpu_load(interval=1):
     """Returns the CPU usage percentage."""
-    return psutil.cpu_percent(interval=interval)
+    cpu_load = psutil.cpu_percent(interval=interval)
+    logging.info(f"CPU Load: {cpu_load}%")
+    return cpu_load
 
 def monitor_cpu(interval=2, duration=30):
     """

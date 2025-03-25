@@ -2,13 +2,15 @@ import psutil
 import time
 import logging
 
-logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(message)s")
+# Configure logging with timestamps
+logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(message)s", datefmt="%Y-%m-%d %H:%M:%S")
 
 class LoadBalancer:
     def __init__(self, servers):
         """Initialize with a list of servers."""
         self.servers = servers
-        self.server_load = {server: 0 for server in servers}  # Track load per server
+        self.server_load = {server: 0 for server in servers}
+        logging.info(f"LoadBalancer initialized with servers: {servers}")
 
     def add_task(self, task_id, task_load):
         """Assign task to the least loaded server."""
@@ -20,11 +22,12 @@ class LoadBalancer:
         """Implements round-robin server selection."""
         server = self.servers.pop(0)
         self.servers.append(server)
+        logging.info(f"Next server selected: {server}")
         return server
 
     def monitor_load(self):
         """Simulate server load balancing over time."""
-        for _ in range(10):  # Simulating multiple cycles
+        for _ in range(10):
             logging.info(f"Current Server Loads: {self.server_load}")
             time.sleep(2)
 
